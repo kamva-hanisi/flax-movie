@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Map/show movies.png"/>
+    <link rel="icon" href="Map/show movies.png">
     <link rel="stylesheet" href="style.css">
-    <title>flax-movie</title>
+    <title>Flax Movie</title>
 </head>
+
 <body>
     <header>
-        <nav>
+        <a class="brand" href="index.html">
+            <img src="Map/gin.jpg" alt="Flax Movie logo">
+            <span>Flax Movie</span>
+        </a>
+        <nav aria-label="Main navigation">
             <ul>
+                <li><a href="index.html">Home page</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a class="nav-button" href="#login">Log In</a></li>
+                <li><a class="nav-button" href="#signup">Sign Up</a></li>
             </ul>
-            <a href="https://kamva-hanisi.github.io/flax-movie/movie/" class="btn">show movies</a>
         </nav>
     </header>
+
     <main>
         <section id="cover">
             <div class="cover-content">
-                <h1>flax-movie</h1>
-                <p></p>
+                <p class="eyebrow">Movies from everywhere</p>
+                <h1>Flax Movie</h1>
+                <p>Search latest movies, old movies, trailers, and legal watch links from one place.</p>
+                <a href="inside/component/movie/index.html" class="btn">Start watching</a>
             </div>
         </section>
+
         <section id="about">
             <h2>About</h2>
-            <p>This project was inspired by [personal story describing inspiration].</p>
-            <p>[Include timeline if applicable]</p>
-            <p>This project is a Portfolio Project for Holberton School.</p>
-            <p>Connect with the team members:</p>
-            <ul>
-                <li><a href="www.linkedin.com/in/hanisi-kamva-09b425250">Team Member 1's LinkedIn</a></li>
-                <li><a href="https://github.com/kamva-hanisi">Team Member 1's GitHub</a></li>
-                <li><a href="lucashanisi">Team Member 1's Twitter</a></li>
-                <!-- Repeat for other team members -->
-            </ul>
-            <p>GitHub Repository: <a href="https://github.com/kamva-hanisi/flax-movie.git">Project GitHub Repository</a></p>
-            <p>This project is a Portfolio Project for Holberton School. <a href="https://www.holbertonschool.com/">Holberton School</a></p>
-            <p>watch movies and flax and first choose!! light it on...</p>
+            <p>Flax Movie is a movie discovery project. It helps people find films, trailers, and trusted places to watch online.</p>
+            <p>Because no small website can store every movie in the world, Flax Movie connects searches to large movie platforms like TMDb, IMDb, YouTube, and JustWatch.</p>
         </section>
+
         <section id="features">
-            
             <h2>Features</h2>
-            <p>search button watch movies last movies...</p>
+            <div class="feature-grid">
+                <article>
+                    <h3>Latest and old movies</h3>
+                    <p>Search for new releases, classics, action, comedy, animation, and more.</p>
+                </article>
+                <article>
+                    <h3>Trailer links</h3>
+                    <p>Open trailers quickly before choosing what to watch.</p>
+                </article>
+                <article>
+                    <h3>Legal watch sources</h3>
+                    <p>Find official streaming, rental, and movie information pages.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="login" class="auth-section">
+            <h2>Log In</h2>
+            <form class="auth-form">
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" placeholder="you@example.com">
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" placeholder="Password">
+                <button class="btn" type="button">Log In</button>
+            </form>
+        </section>
+
+        <section id="signup" class="auth-section">
+            <h2>Sign Up</h2>
+            <form class="auth-form">
+                <label for="signup-name">Name</label>
+                <input id="signup-name" type="text" placeholder="Your name">
+                <label for="signup-email">Email</label>
+                <input id="signup-email" type="email" placeholder="you@example.com">
+                <label for="signup-password">Password</label>
+                <input id="signup-password" type="password" placeholder="Create password">
+                <button class="btn" type="button">Sign Up</button>
+            </form>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 flax-movie</p>
+        <p>&copy; 2026 Flax Movie</p>
     </footer>
 </body>
+
 </html>

@@ -1,84 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="../../../Map/show movies.png"/>
-    <link href="styles/style.css" rel="stylesheet" type="text/css" />
-    <title>flax movie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../Map/show movies.png">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Flax Movie</title>
 </head>
 
 <body>
     <div id="root">
         <header>
-            <img class="logo" src="../../../Map/gin.jpg" alt="logo">
-            <nav>
-                <div class="bx bx-menu" id="menu-icon"></div>
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">About</a></li>
-    
+            <a class="brand" href="../../../index.html">
+                <img class="logo" src="../../../Map/gin.jpg" alt="Flax Movie logo">
+                <span>Flax Movie</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+                <ul class="menu" id="main-menu">
+                    <li><a href="../../../index.html">Home page</a></li>
+                    <li><a href="../../../index.html#about">About</a></li>
+                    <li><a href="../../../index.html#features">Features</a></li>
+                    <li><a class="nav-button" href="../../../index.html#login">Log In</a></li>
+                    <li><a class="nav-button" href="../../../index.html#signup">Sign Up</a></li>
                 </ul>
             </nav>
         </header>
-        <section id="Latest">
-            <h2 class="Latest Heading">Latest Movies</h2>
-            <ul id="autoWidth2" class="cs-hidden">
-                <li class="item-a">
-                    <div class="Latest-box">
-                        <div class="Latest-box-img">
-                            <img src="../../../Map/The-Beekeeper.png" alt="The-Beekeeper">
-                        </div>
-                        <div class="Latest-box-text">
-                            <strong>The Beekeeper</strong>
-                            <p>Action Movies</p>
-                            <p>Dune: Part One (2024)</p>
 
-                            <!-- Creating of a container class that 
-                                store other useful classes -->
-                            <div class="container">
-
-                                <!-- Creating a ui-widgets classes that 
-                                    store other useful classes like 
-                                    ui-values and ui-labels -->
-                                <div class="ui-widgets">
-                                    <div class="ui-values">8.5</div>
-                                    <!-- <div class="ui-labels">Java</div> -->
-                                </div>
-
-                                </div>
-                                <!-- Add heading of the page -->
-                                <h1>Overview</h1>
-                            <p>One man’s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers</p>
-                            </div>
-                            
-                        </div>
-                            
-                    
-                </li>
-            </ul>
-        </section>
-        <div class="hero-section">
-            <div class="hero-slide">
-                <div class="carousel-nav-center" id="hero-carousel">
-                    <div class="hero-slide-item">
-                        <img srs="../../../Map/free movie.jpg" alt="">
-                        <div class="overlay"></div>
-                            
-                        
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Movies from around the world</p>
+                    <h1>Find the latest films, trailers, and legal places to watch.</h1>
+                    <p>Flax Movie helps viewers discover new releases, compare popular streaming services, and jump straight into trailers before choosing what to watch.</p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#watch-now">Watch movies</a>
+                        <a class="button secondary" href="#latest">View trailers</a>
+                        <a class="button secondary" href="../movies/index.html">View more movies</a>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section class="world-search" aria-labelledby="world-search-heading">
+                <div class="section-heading">
+                    <p class="eyebrow">Global movie search</p>
+                    <h2 id="world-search-heading">Search latest and old movies</h2>
+                    <p>Type any movie name, actor, genre, or year. Flax Movie will open trusted movie search pages so you can find films from around the world.</p>
+                </div>
+                <form class="global-search-form" id="global-search-form">
+                    <input id="global-movie-search" type="search" placeholder="Try: Avatar, Titanic, latest action movies..." aria-label="Search any movie">
+                    <button class="button primary" type="submit">Search movies</button>
+                </form>
+                <div class="global-links" aria-label="Global search links">
+                    <a id="tmdb-search-link" href="https://www.themoviedb.org/movie" target="_blank" rel="noopener noreferrer">TMDb</a>
+                    <a id="imdb-search-link" href="https://www.imdb.com/search/title/" target="_blank" rel="noopener noreferrer">IMDb</a>
+                    <a id="justwatch-search-link" href="https://www.justwatch.com/" target="_blank" rel="noopener noreferrer">JustWatch</a>
+                    <a id="youtube-search-link" href="https://www.youtube.com/results?search_query=movie+trailers" target="_blank" rel="noopener noreferrer">YouTube trailers</a>
+                </div>
+                <div class="quick-links">
+                    <a href="https://www.themoviedb.org/movie/now-playing" target="_blank" rel="noopener noreferrer">Latest movies</a>
+                    <a href="https://www.themoviedb.org/movie/top-rated" target="_blank" rel="noopener noreferrer">Top rated movies</a>
+                    <a href="https://www.imdb.com/chart/top/" target="_blank" rel="noopener noreferrer">Classic movies</a>
+                </div>
+            </section>
+
+            <section class="watch-panel" id="watch-now" aria-labelledby="watch-heading">
+                <div class="section-heading">
+                    <p class="eyebrow">Before you watch</p>
+                    <h2 id="watch-heading">Choose a trusted movie service</h2>
+                    <p>Use official platforms for full movies, rentals, subscriptions, and free ad-supported films. Availability changes by country.</p>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-card">
+                        <h3>Netflix</h3>
+                        <p>Popular global streaming service for films, series, documentaries, and originals.</p>
+                        <a href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer">Open Netflix</a>
+                    </article>
+                    <article class="service-card">
+                        <h3>Prime Video</h3>
+                        <p>Watch included titles, rent new releases, or buy movies digitally.</p>
+                        <a href="https://www.primevideo.com/" target="_blank" rel="noopener noreferrer">Open Prime Video</a>
+                    </article>
+                    <article class="service-card">
+                        <h3>Disney+</h3>
+                        <p>Stream Disney, Pixar, Marvel, Star Wars, National Geographic, and more.</p>
+                        <a href="https://www.disneyplus.com/" target="_blank" rel="noopener noreferrer">Open Disney+</a>
+                    </article>
+                    <article class="service-card">
+                        <h3>YouTube Movies</h3>
+                        <p>Find official trailers, rentals, purchases, and free movie options where available.</p>
+                        <a href="https://www.youtube.com/movies" target="_blank" rel="noopener noreferrer">Open YouTube Movies</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="toolbar" aria-label="Movie tools">
+                <label for="movie-search">Search movies</label>
+                <div class="search-row">
+                    <input id="movie-search" type="search" placeholder="Search latest movies, action, comedy...">
+                    <button class="button primary" id="clear-search" type="button">Clear</button>
+                    <a class="button secondary" href="../movies/index.html">View more movies</a>
+                </div>
+            </section>
+
+            <section id="latest" aria-labelledby="latest-heading">
+                <div class="section-heading">
+                    <p class="eyebrow">Latest picks</p>
+                    <h2 id="latest-heading">Latest Movies</h2>
+                </div>
+
+                <div class="movie-grid">
+                    <article class="movie-card" data-title="The Beekeeper action thriller">
+                        <img src="../../../Map/The-Beekeeper.png" alt="The Beekeeper poster">
+                        <div class="movie-card-body">
+                            <div class="movie-meta">
+                                <span>Action</span>
+                                <strong>8.5</strong>
+                            </div>
+                            <h3>The Beekeeper</h3>
+                            <p>One man's campaign for vengeance becomes bigger after his past as a secret operative is revealed.</p>
+                            <div class="card-actions">
+                                <a class="button primary" href="#watch-now">Watch options</a>
+                                <button class="button secondary trailer-button" type="button" data-trailer="https://www.youtube.com/embed/SzINZZ6iqxY">View trailer</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Inside Out 2 animation comedy family">
+                        <img src="../../../Map/INSIDE OUT 2.jpeg" alt="Inside Out 2 poster">
+                        <div class="movie-card-body">
+                            <div class="movie-meta">
+                                <span>Animation</span>
+                                <strong>8.0</strong>
+                            </div>
+                            <h3>Inside Out 2</h3>
+                            <p>Riley grows up, and new emotions arrive at headquarters.</p>
+                            <div class="card-actions">
+                                <a class="button primary" href="#watch-now">Watch options</a>
+                                <button class="button secondary trailer-button" type="button" data-trailer="https://www.youtube.com/embed/LEjhY15eCx0">View trailer</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="The Fall Guy action comedy stunt">
+                        <img src="../../../Map/The FALL GUY.png" alt="The Fall Guy poster">
+                        <div class="movie-card-body">
+                            <div class="movie-meta">
+                                <span>Action Comedy</span>
+                                <strong>7.3</strong>
+                            </div>
+                            <h3>The Fall Guy</h3>
+                            <p>A stuntman gets pulled into a real mystery while trying to save a movie production.</p>
+                            <div class="card-actions">
+                                <a class="button primary" href="#watch-now">Watch options</a>
+                                <button class="button secondary trailer-button" type="button" data-trailer="https://www.youtube.com/embed/j7jPnwVGdZ8">View trailer</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
         <footer>
-            <p>Copyright &copy; 2024</p>
+            <p>Copyright &copy; 2026 Flax Movie</p>
         </footer>
     </div>
 
-    
+    <div class="trailer-modal" id="trailer-modal" aria-hidden="true">
+        <div class="trailer-dialog" role="dialog" aria-modal="true" aria-label="Movie trailer">
+            <button class="close-trailer" type="button">Close</button>
+            <iframe id="trailer-frame" title="Movie trailer" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
